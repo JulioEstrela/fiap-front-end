@@ -1,0 +1,43 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+:root {
+    font-family: 'Poppins', sans-serif;
+    --color-light: #fff;
+    --color-dark: #000;
+    --color-fiap: #dc143c;
+    --transition: .2s;
+}
+
+.header-page {
+    display: flex;
+    justify-content: space-between;
+
+    margin: 2rem;
+}
+
+.link-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+
+    li {
+        list-style: none;
+    }
+}
+
+.link {
+    text-decoration: none;
+    font-weight: 600;
+    transition: color var(--transition);
+}
+.link:hover {
+    color: var(--color-fiap);
+}
