@@ -13,14 +13,26 @@
     --color-light: #fff;
     --color-dark: #000;
     --color-fiap: #dc143c;
-    --transition: .2s;
+    --transition: .3s;
+}
+.container {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, .9), rgba(0, 0, 0, .8)),
+    url(../images/pexels-therato-1933239.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    color: var(--color-light);
 }
 
 .header-page {
     display: flex;
     justify-content: space-between;
 
-    margin: 2rem;
+    
+    padding: 2rem;
 }
 
 .link-list {
@@ -36,8 +48,109 @@
 .link {
     text-decoration: none;
     font-weight: 600;
-    transition: color var(--transition);
+    transition: color var(--transition), border var(--transition);
+    color: var(--color-light);
+
+    border-bottom: transparent solid 2px;
 }
 .link:hover {
     color: var(--color-fiap);
+
+    border-bottom: var(--color-fiap) solid 2px;
+}
+
+.hero {
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 2rem;
+}
+
+.hero h2 {
+    font-size: 8vmin;
+}
+.hero h3 {
+    font-size: 6vmin;
+}
+.btn {
+    color: var(--color-light);
+    text-decoration: none;
+    padding: 8px 30px;
+    background-color: var(--color-fiap);
+
+    border: var(--color-fiap) solid 2px;
+    border-radius: 10px;
+
+    transition: background-color var(--transition);
+}
+.hero .btn:hover {
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.btn-seemore {
+    transition: scale var(--transition);
+}
+.btn-seemore:hover {
+    scale: 1.1;
+    transition: scale var(--transition);
+}
+
+
+.cards {
+    width: 90%;
+    min-height: 100vh;
+    margin: auto;
+    padding: 4rem 0;
+
+    text-align: center;
+}
+
+.cards h2 {
+    font-size: 4vmin;
+}
+
+.cards-list {
+    width: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    row-gap: 5rem;
+    margin: 3rem 0;
+}
+
+.card-item {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    box-shadow: 1px 1px 30px #ccc;
+    padding: 3rem 1rem;
+    border-radius: 10px;
+    
+    transition: scale var(--transition);
+}
+
+.card-item:hover {
+    scale: 1.05;
+}
+
+.card-item img {
+    width: 80%;
+    border-radius: 10px;
+}
+
+@media(width <= 900px) {
+    .card-item{
+        width: 90%;
+    }
 }
